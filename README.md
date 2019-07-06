@@ -2,6 +2,8 @@
 
 > Nuxt with Typescript and Koa Serverless
 
+More details in my Linkedin Article: https://www.linkedin.com/pulse/nuxt-typescript-koa-serverless-edison-harada
+
 ## Build Setup
 
 ``` bash
