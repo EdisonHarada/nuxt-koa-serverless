@@ -1,0 +1,47 @@
+{
+  "name": "nuxt-koa-serverless",
+  "version": "1.0.0",
+  "description": "Nuxt with Typescript and Koa Serverless",
+  "author": "Edison Harada",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "sls-offline": "npm run build && sls offline",
+    "deploy": "npm run build && sls deploy"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.5.4",
+    "@nuxtjs/eslint-module": "^0.0.1",
+    "cross-env": "^5.2.0",
+    "koa": "^2.6.2",
+    "nuxt": "^2.0.0",
+    "nuxt-property-decorator": "^2.3.0",
+    "serverless-http": "^2.0.2",
+    "ts-node": "^8.3.0"
+  },
+  "devDependencies": {
+    "@nuxt/typescript": "^2.8.1",
+    "@nuxtjs/eslint-config": "^0.0.1",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.15.1",
+    "eslint-config-standard": ">=12.0.0",
+    "eslint-plugin-import": ">=2.16.0",
+    "eslint-plugin-jest": ">=22.3.0",
+    "eslint-plugin-node": ">=8.0.1",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-promise": ">=4.0.1",
+    "eslint-plugin-standard": ">=4.0.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "nodemon": "^1.18.9",
+    "serverless": "^1.46.1",
+    "serverless-domain-manager": "^3.2.6",
+    "serverless-offline": "^5.6.0"
+  }
+}

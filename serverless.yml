@@ -1,0 +1,31 @@
+service: nuxt-koa-serverless
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: us-east-1
+
+functions:
+  nuxt:
+    memorySize: 256
+    timeout: 10
+    handler: serverless.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+          cors: true
+      - http:
+          path: /{proxy+}
+          method: ANY
+          cors: true
+custom:
+  customDomain:
+    domainName: "YOURDOMAIN.COM"
+    certificateName: "*.YOURDOMAIN.COM"
+    createRoute53Record: false
+    basePath: ""
+
+plugins:
+  - serverless-offline
+  - serverless-domain-manager
