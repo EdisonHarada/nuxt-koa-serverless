@@ -5,6 +5,9 @@
       <h1 class="title">
         Nuxt with Typescript in Koa Serverless =)
       </h1>
+      <h1 class="subtitle">
+        More details: https://www.linkedin.com/pulse/nuxt-typescript-koa-serverless-edison-harada
+      </h1>
       <div>
         ServerSide
         {{ serverSideIp }}
@@ -18,16 +21,15 @@
 </template>
 
 <script lang="ts">
-import axios from 'axios'
 import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component({
   components: {
     LogoComponent: () => import('@/components/Logo.vue')
   },
-  async asyncData() {
+  async asyncData({ app }) {
     return {
-      serverSideIp: (await axios.get('https://api.ipify.org?format=json')).data.ip
+      serverSideIp: (await app.$axios.get('https://api.ipify.org?format=json')).data.ip
     }
   }
 })
