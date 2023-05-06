@@ -40,7 +40,7 @@
     "eslint-plugin-standard": ">=4.0.0",
     "eslint-plugin-vue": "^5.2.2",
     "nodemon": "^1.18.9",
-    "serverless": "^1.46.1",
+    "serverless": "^1.83.3",
     "serverless-domain-manager": "^3.2.6",
     "serverless-offline": "^5.6.0"
   }
